@@ -2,14 +2,12 @@
 set -e
 
 echo "[INFO] Running Stage263 QSP..."
-
 python3 tools/run_stage263_qsp.py
 
 echo "[INFO] Generating verification page..."
+mkdir -p site
 
-mkdir -p _site
-
-cat > _site/index.html <<'HTML'
+cat > site/index.html <<'HTML'
 <!doctype html>
 <html>
 <head>
